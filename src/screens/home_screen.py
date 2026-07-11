@@ -22,7 +22,7 @@ def home_screen():
             width=100
         )
 
-        if st.button("Student Portal", type="primary",icon=':material/arrow_outward:', icon_position="right"):
+        if st.button("Student Portal", type="primary",icon=':material/arrow_outward:'):
             st.session_state['login_type'] = 'student'
             st.rerun()
 
@@ -35,7 +35,7 @@ def home_screen():
             width=120
         )
 
-        if st.button("Teacher Portal", type="primary", icon=':material/arrow_outward:', icon_position="right"):
+        if st.button("Teacher Portal", type="primary", icon=':material/arrow_outward:'):
             st.session_state['login_type'] = 'teacher'
             st.rerun()
 
