@@ -311,12 +311,6 @@ def login_teacher(username, password):
 
     return False
 
-def login_teacher(username, password):
-    if not username or not password:
-        return False
-
-
-    footer_dashboard()
 
 
 
