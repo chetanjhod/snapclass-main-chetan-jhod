@@ -67,7 +67,7 @@ def style_base_layout():
                 
             h1 {
                 
-                font-family: 'poppins' , sans-serif !important;
+                font-family: 'Climate crisis' , sans-serif !important;
                 font-size: 1.8rem !important;
                 line_weight:1.1 !important;
                 margin-bottom:0rem !important;
@@ -75,7 +75,7 @@ def style_base_layout():
 
             h2 {
                 
-                font-family: 'poppins' , sans-serif !important;
+                font-family: 'Climate crisis' , sans-serif !important;
                 font-size: 1.5rem !important;
                 line_height:0.9 !important;
                 margin-bottom:0rem !important;
