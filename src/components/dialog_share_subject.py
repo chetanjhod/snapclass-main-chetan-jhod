@@ -5,7 +5,7 @@ import io
 
 @st.dialog("share class link")
 def share_subject_dialog(subject_name, subject_code):
-    app_domain = "snapclass-main.streamlit.app"
+    app_domain = "https://snapclass-main.streamlit.app"
     join_url = f"{app_domain}?join-code={subject_code}"
 
     st.header("scan to join") 
@@ -19,6 +19,7 @@ def share_subject_dialog(subject_name, subject_code):
        st.markdown("### Copy Link")
        st.code(join_url, language="text")
        st.code(subject_code, language="text")
+       st.link_button("Open Join Link", join_url)
        st.info("Copy this link to share on Whatsapp or Email")
 
     with col2:
