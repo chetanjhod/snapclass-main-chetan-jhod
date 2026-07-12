@@ -11,7 +11,8 @@ def show_attendance_result(df, logs):
 
     with col1:
         if st.button("Discard", width="stretch"):
-            st.session_state.voice_attendance_result = None
+            st.session_state.voice_attendance_results = None
+            st.session_state.face_attendance_results = None
             st.session_state.attendance_images = []
             st.rerun()
 
@@ -21,7 +22,8 @@ def show_attendance_result(df, logs):
                 create_attendance(logs)
                 st.toast("Attendance taken")
                 st.session_state.attendance_images = []
-                st.session_state.voice_attendance_result = None
+                st.session_state.voice_attendance_results = None
+                st.session_state.face_attendance_results = None
                 st.rerun()
 
             except Exception:

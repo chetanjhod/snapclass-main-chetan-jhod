@@ -44,7 +44,7 @@ def teacher_dashboard():
         header_dashboard()
 
     with c2:
-        st.subheader(f"""wellcome, {teacher_data['name']}""")
+        st.subheader(f"""welcome, {teacher_data['name']}""")
         if st.button(
             "Logout",
             key="home_btn_register"
@@ -130,8 +130,7 @@ def teacher_tab_take_attendance():
     selected_subject_id = subject_options[selected_subject_label]
 
     st.divider()
-
-
+   
     if st.session_state.attendance_images:
        st.header('Added Photos')
        gallery_cols = st.columns(4)
@@ -149,7 +148,7 @@ def teacher_tab_take_attendance():
 
     
     with c2:
-     if st.button(
+       if st.button(
         'Run Face Analysis',
         width='stretch',
         type='secondary',
@@ -204,11 +203,22 @@ def teacher_tab_take_attendance():
                         "is_present": is_present
                     })
 
-            attendance_result_dialog(pd.DataFrame(results),attendance_to_log)
-    with c3:
-           if st.button('use voice Attendance', type= 'primary', width='stretch', icon=':material/mic:'):
-            voice_attendance_dialog(selected_subject_id)
+            st.session_state.face_attendance_results = (pd.DataFrame(results),attendance_to_log)
+            st.rerun()
+    if  st.session_state.get("face_attendance_results") is not None:
+        st.divider()
+        df_results, logs = st.session_state.face_attendance_results
+        attendance_result_dialog(df_results, logs)
 
+    with c3:
+        if st.button(
+               'Use Voice Attendance',
+                type='primary',
+                width='stretch',
+                icon=':material/mic:'
+                 ):
+            voice_attendance_dialog(selected_subject_id)
+    
 def teacher_tab_manage_subjects():
     teacher_id = st.session_state.teacher_data["teacher_id"]
 
@@ -249,9 +259,6 @@ def teacher_tab_manage_subjects():
 
 def teacher_tab_attendance_records():
     st.header("Atandance record")
-
-    def teacher_tab_attendance_records():
-      st.header('Attendance Records')
 
     teacher_id = st.session_state.teacher_data['teacher_id']
 

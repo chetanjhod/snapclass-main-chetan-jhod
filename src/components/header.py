@@ -8,7 +8,7 @@ def header_home():
     st.markdown(f"""
         <div style="display: flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom: 10px; margin-top:10px">
            <img src='{logo_url}' style='height:70px;' /> 
-           <h1 style='text-align:center; color:#E0E3FF'>SNAP<br/> CLASS</h1> 
+           <h1 style='text-align:center; color:#1F2937'>SNAP<br/> CLASS</h1> 
         </div>
                 
                 """, unsafe_allow_html=True)
