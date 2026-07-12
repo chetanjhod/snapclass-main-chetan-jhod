@@ -116,14 +116,7 @@ def style_base_layout():
             .stButton > button:hover {
                 transform: scale(1.05);
             }
-            .stTextInput label,
-            .stTextInput p,
-            .stPasswordInput label,
-            .stPasswordInput p,
-            .stMarkdown,
-            h1, h2, h3, h4, p {
-            color: #1F2937 !important;
-            }   
+             
         </style>
                 
                 
