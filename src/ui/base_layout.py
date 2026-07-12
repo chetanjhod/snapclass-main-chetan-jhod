@@ -67,7 +67,7 @@ def style_base_layout():
                 
             h1 {
                 
-                font-family: 'outfit' , sans-serif !important;
+                font-family: 'climate crisis' , sans-serif !important;
                 font-size: 1.8rem !important;
                 font-weight: 700 !important;
                 line-height: 1.1 !important;
@@ -76,7 +76,7 @@ def style_base_layout():
 
             h2 {
                 
-                font-family: 'outfit' , sans-serif !important;
+                font-family: 'climate crisis' , sans-serif !important;
                 font-size: 1.5rem !important;
                 line-height:0.9 !important;
                 margin-bottom:0rem !important;
