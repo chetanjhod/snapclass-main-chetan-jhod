@@ -82,6 +82,12 @@ def style_base_layout():
                 margin-bottom:0rem !important;
                 }
 
+            h1, h2, h3 {
+                color: #111111 !important;
+                opacity: 1 !important;
+                text-shadow: none !important;
+            }
+
             h3, h4, p {
                 font-family: 'outfit', sans-serif;
             }
