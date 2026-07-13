@@ -123,7 +123,35 @@ def style_base_layout():
             .stButton > button:hover {
                 transform: scale(1.05);
             }
-             
+            div[data-testid="stTextInput"] input {
+               background: #FFFFFF !important;
+               color: #111111 !important;
+              -webkit-text-fill-color: #111111 !important;
+               border: 2px solid #D9D9D9 !important;
+               border-radius: 14px !important;
+            }
+
+            div[data-testid="stTextInput"] input:focus {
+                border: 2px solid #5865F2 !important;
+                box-shadow: 0 0 0 2px rgba(88,101,242,0.15) !important;
+            }
+
+            div[data-testid="stTextInput"] input::placeholder {
+                color: #9CA3AF !important;
+                opacity: 1 !important;
+            }
+
+            div[data-testid="stWidgetLabel"] p {
+                color: #111111 !important;
+                font-weight: 600 !important;
+            }
+            label {
+                    color: #111111 !important;
+                }
+
+                [data-testid="stWidgetLabel"] {
+                color: #111111 !important;
+            }
         </style>
                 
                 
